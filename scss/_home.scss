@@ -1,0 +1,481 @@
+/*	Hero  ** =================================================== */
+.hero {
+	background-image: url(../img/bg-450.jpg);
+	background-size: cover;
+	color: #fff;
+	display: block;
+	height: 156px;
+	margin-bottom: $margin;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+
+	h1 {
+		color: #fff;
+
+		span {
+			text-transform: lowercase;
+		}
+	}
+
+	em {
+		font-family: $lato_reg;
+		font-weight: $med;
+	}
+
+	.more-detail {
+		color: $secondaryColor;
+	}
+}
+
+.beta-notice {
+	background: rgba($secondaryColor,0.9);
+	bottom: 0;
+	font-size: .8125em;
+	left: 0;
+	letter-spacing: .05em;
+	padding: 6px 8px;
+	position: absolute;
+
+	a {
+		color: $textColor;
+		font-family: $lato_reg;
+	}
+}
+
+.intro {
+	@include verticalAlignCenter();
+	left: 3%;
+	line-height: 1.75rem;
+	padding-left: 2.5%;
+	text-shadow: 0 0 40px #333, 0 0 4px #333;
+	top: 40%;
+	width: 90%;
+
+	&:before {
+		border-bottom: 1px solid #fff;
+		border-left: 1px solid #fff;
+		border-top: 1px solid #fff;
+		content: '';
+		height: 86%;
+		left: 0;
+		position: absolute;
+		top: 6%;
+		width: 7px;
+	}
+}
+
+/*	Callouts  ** =================================================== */
+.callouts-main {
+	margin-bottom: $margin;
+	margin-top: $margin;
+
+	h4 {
+		margin-bottom: 0.75rem;
+	}
+
+	a {
+		display: block;
+
+		&:hover {
+
+			.callout {
+				opacity: 0.5;
+			}
+
+			i {
+				callout: 1;
+
+				path, polygon {
+					fill: $midGrey;
+				}
+			}
+		}
+	}
+}
+
+.callout {
+	height: 80px;
+	overflow: hidden;
+	position: relative;
+	width: 80px;
+	@include vendor-prefix(transition, 0.2s all ease-in-out);
+}
+
+.callout-content {
+	text-align: center;
+
+	p {
+		color: $darkGrey;
+		font-family: $lato_light;
+		font-size: .8125em;
+		font-weight: $light;
+	}
+}
+
+.plan-callout,
+.resources-callout,
+.routes-callout {
+	margin-bottom: 0.75rem;
+	position: relative;
+	text-align: center;
+
+	i {
+		display: block;
+		height: 100%;
+		left: 0;
+		position: absolute;
+		top: 0;
+		width: 100%;
+
+		.shadow {
+			position: relative;
+			z-index: 1;
+		}
+
+		path, polygon {
+			@include vendor-prefix(transition, 0.2s all ease-in-out);
+		}
+	}
+}
+
+.plan-callout i:after {
+	height: 74px;
+	left: 49%;
+	top: 28px;
+	width: 5px;
+}
+
+/*	Featured  ** =================================================== */
+.featured {
+
+	h2 {
+		font-size: .875em;
+		margin-bottom: 0.5rem;
+	}
+
+	.featured-excerpt {
+		font-size: .8125em;
+		line-height: 1.5em;
+		text-shadow: 0 0 40px #333, 0 0 4px #333, 0 0 60px #333;
+	}
+}
+
+/*	Pillars  ** =================================================== */
+.pillars-hero {
+	background-image: url(../img/pillars-bg-900.jpg);
+	border-top: 27px solid $secondaryColor;
+	margin-bottom: $margin * 1.5;
+	height: 153px;
+	overflow: visible;
+
+	&:before {
+		background-color: rgba($textColor, 0.25);
+		background-image: $patternOverlay;
+		background-size: 6px;
+		content: '';
+		height: 100%;
+		left: 0;
+		opacity: 0.4;
+		position: absolute;
+		top: 0;
+		width: 100%;
+	}
+
+	&:after {
+		background: $secondaryColor;
+		bottom: -18px;
+		color: $textColor;
+		content: 'THE 5 PILLARS OF THE PLAN';
+		font-family: $lato_bold;
+		font-size: .6875em;
+		font-weight: $bold;
+		left: 0;
+		letter-spacing: .025em;
+		line-height: 30px;
+		padding-right: $padding;
+		position: absolute;
+		text-align: right;
+		text-transform: uppercase;
+		width: 54%;
+		z-index: 1;
+	}
+}
+
+.pillars-hero-title {
+	@include verticalAlignCenter();
+	left: 22%;
+	padding-left: 2.5%;
+	padding-right: 2.5%;
+	text-align: center;
+	text-shadow: 0 0 10px $darkGrey, 0 0 20px $darkGrey;
+
+	&:before, &:after {
+		border-bottom: 1px solid #fff;
+		border-top: 1px solid #fff;
+		content: '';
+		height: 86%;
+		position: absolute;
+		top: 6%;
+		width: 7px;
+	}
+
+	&:before {
+		border-left: 1px solid #fff;
+		left: 0;
+	}
+
+	&:after {
+		border-right: 1px solid #fff;
+		right: 0;
+	}
+
+	h1 {
+
+		em {
+			font-size: .8125em;
+		}
+	}
+}
+
+.pillars-intro {
+
+
+	.textwidget {
+		padding-top: 1.25rem;
+
+		p {
+			font-size: 1em;
+			line-height: 1.8125em;
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+	}
+}
+
+.home-sidebar {
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+
+		li:last-child a {
+			border-bottom: none;
+		}
+	}
+
+	a {
+		border-bottom: 1px solid $midGrey;
+		display: block;
+		font-family: $lato_bold;
+		font-size: .75em;
+		font-weight: $bold;
+		letter-spacing: 0.05em;
+		line-height: 2.3125rem;
+	}
+}
+
+.tiptop {
+	background: transparent;
+	border: none;
+	bottom: 1rem;
+	color: #beb9b0;
+	font-family: $opensans_bold;
+	font-size: .6125em;
+	font-weight: $bold;
+	letter-spacing: 0.05em;
+	left: 5%;
+	position: fixed;
+	text-transform: uppercase;
+
+	span {
+		font-family: monospace;
+		font-size: 1.375em;
+		font-weight: $extraBold;
+	}
+}
+
+.pillars {
+
+	article {
+		background: #fff;
+		padding: 4rem 0;
+		position: relative;
+
+		&:nth-of-type(2n+1) {
+			background: $offWhite;
+
+			&:before {
+				border-top: 40px solid #fff;
+			}
+		}
+
+		&:before {
+			border-top: 40px solid $offWhite;
+			border-left: 42px solid transparent;
+			border-right: 42px solid transparent;
+			content: '';
+			left: 37%;
+			position: absolute;
+			top: 0;
+		}
+
+		&:after {
+			font-family: $opensans_extra_bold;
+			font-size: 1.125em;
+			font-weight: $extraBold;
+			letter-spacing: .05rem;
+			margin: 0 0 1rem;
+			text-transform: uppercase;
+			left: 37%;
+			position: absolute;
+			text-align: center;
+			top: 0;
+			width: 84px;
+		}
+	}
+	
+	h2 {
+		text-align: center;
+	}
+
+	p {
+		font-family: $lato_light;
+		font-weight: $light;
+		line-height: 1.675rem;
+		margin: 0 0 .5rem;
+	}
+
+	.wp-post-image {
+		display: block;
+		margin: 0 auto;
+		max-width: 100px;
+	}
+
+	img[alt="mobility"] {
+		max-width: 110px;
+	}
+
+	.post-links {
+		display: none;
+
+		div {
+			float: right;
+		}
+		
+		a {
+			display: block;
+			font-size: .6125em;
+			font-weight: normal;
+			letter-spacing: .075em;
+			line-height: 1.675rem;
+			text-transform: uppercase;
+		}
+	}
+}
+
+#post-20 {
+
+	&:after { 
+		color: $safety;
+		content: '1'; 
+	}
+	
+	h2 a, .more-detail { 
+		color: $safety; 
+	}
+}
+			
+#post-40 { 
+	
+	&:after { 
+		color: $health;
+		content: '2';
+	}
+	
+	h2 a, .more-detail { 
+		color: $health; 
+	}
+}
+			
+#post-48 { 
+
+	&:after { 
+		color: $economy;
+		content: '3';
+	}
+	
+	h2 a, .more-detail { 
+		color: $economy;
+	}
+}
+
+#post-51 { 
+	
+	&:after { 
+		color: $mobilty;
+		content: '4'; 
+	}
+	
+	h2 a, .more-detail { 
+		color: $mobilty;
+	}
+}
+
+#post-45 { 
+	
+	&:after { 
+		content: '5'; 
+		color: $environment; 
+	}
+	
+	h2 a, .more-detail { 
+		color: $environment;
+	}
+}
+
+.routes {
+	background-image: url(../img/bikeroutes-bg.jpg);
+	background-position: 50%;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 4rem 0;
+	position: relative;
+
+	&:before {
+		background: rgba(0,181,204,.95);
+		bottom: -1px;
+		content: '';
+		left: 0;
+		opacity: .75;
+		position: absolute;
+		right: 0;
+		top: 0;
+	}
+
+	.bikeroutes-logo, h3 {
+		display: inline-block;
+		float: none;
+		margin: 0 0 0 -1px;
+		position: relative;
+		vertical-align: middle;
+		z-index: 1;
+		width: 45%;
+	}
+
+	.bikeroutes-logo {
+		margin-right: 5%;
+		text-align: right;
+
+		svg {
+			height: 98px;
+		}
+	}
+
+	h3 {
+		color: #fff;
+	}
+}

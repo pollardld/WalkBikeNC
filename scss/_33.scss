@@ -1,0 +1,151 @@
+/*	Waypoints  ** =================================================== */
+.stuck {
+	width: 65.5%;
+}
+
+/*	Hero  ** =================================================== */
+.hero {
+	background-image: url(../img/bg-1800.jpg);
+	background-size: cover;
+	height: 312px;
+}
+
+/*	Callouts  ** =================================================== */
+.callouts-main {
+	margin-bottom: $margin * 2;
+	margin-top: $margin * 2;
+}
+
+.callout {
+	height: 127px;
+	width: 127px;
+}
+
+.callout-content {
+	padding: 0 10%;
+
+	p {
+		margin-bottom: 0;
+	}
+}
+
+.plan-callout,
+.resources-callout,
+.routes-callout {
+	margin-bottom: 1rem;
+
+	i {
+
+		&:after {
+			background: rgba(40,40,40,0.2);
+			border-radius: 50%;
+			box-shadow: 0 0 50px #333, 0 0 60px #333, 0 0 70px #333, 0 0 80px #333, 0 0 90px #333, 0 0 100px #333;
+			content: '';
+			left: 48%;
+			height: 10px;
+			position: absolute;
+			top: 48%;
+			width: 10px;
+			z-index: 0;
+		}
+	}
+}
+
+/*	Pillars  ** =================================================== */
+.pillars-hero {
+	background-image: url(../img/pillars-bg-1800.jpg);
+	height: 251px;
+
+	&:after {
+		width: 25%;
+	}
+}
+
+.pillars-hero-title {
+	left: 38.5%;
+}
+
+.pillars {
+
+	article {
+
+		&:before, &:after {
+			left: 21%;
+		}
+	}
+
+	h2 {
+		text-align: left;
+	}
+
+	.post-links {
+		display: inline;
+	}
+
+	.wp-post-image {
+		display: inline-block;
+		margin: 0;
+		padding-top: 1rem;
+		max-width: 150px;
+	}
+
+	img[alt="mobility"] {
+		max-width: 180px;
+	}
+}
+
+/*	Page  ** =================================================== */
+.content.spread > .span9 { @include pushpullwidth(12) }
+
+/*	Sidebar  ** =================================================== */
+.spread .leftnav.span3 { 
+	@include pushpullwidth(12); 
+	clear: both;
+	display: block;
+	float: none;
+	overflow: hidden;
+
+	.span10 {
+		@include column(12);
+	}
+}
+
+/*	Tables  ** =================================================== */
+table {
+	font-size: .875em;
+}
+
+/*	Grid  ** =================================================== */
+.span1 { @include column(1) }
+.span2 { @include column(2) }
+.span3 { @include column(3) }
+.span4 { @include column(4) }
+.span5 { @include column(4) }
+.span6 { @include column(6) }
+.span7 { @include column(8) }
+.span8 { @include column(8) }
+.span9 { @include column(9) }
+.span10 { @include column(10) }
+.span11 { @include column(11) }
+
+.spread {
+    &> .span1 { @include pushpullwidth(1); }
+    &> .span2 { @include pushpullwidth(2); }
+    &> .span3 { @include pushpullwidth(3); }
+    &> .span4 { @include pushpullwidth(4); }
+    &> .span5 { @include pushpullwidth(4); }
+    &> .span6 { @include pushpullwidth(6); }
+    &> .span7 { @include pushpullwidth(4); }
+    &> .span8 { @include pushpullwidth(4); }
+    &> .span9 { @include pushpullwidth(9); }
+    &> .span10  { @include pushpullwidth(10); }
+    &> .span11  { @include pushpullwidth(11); }
+    &> .span12  { @include pushpullwidth(12); }
+	&> [class*="span"] {
+		&:nth-child(1) { @include pull(); } 
+		&:nth-child(2) { @include push(); }
+	}
+}
+
+.pull { @include pull(); }
+.push { @include push(); }

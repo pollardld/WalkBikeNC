@@ -1,0 +1,46 @@
+header, main, .main, .container, footer {
+	max-width: 60em;
+}
+
+/*	Waypoints  ** =================================================== */
+.stuck {
+	width: 52.08375%;
+}
+
+/*	Header  ** =================================================== */
+.logo {
+	// width: 21%;
+	width: 22%;
+}
+
+.nav-menu {
+	// width: 62%;
+	width: 61%;
+
+	li {
+		font-size: .6125em;
+
+		> a {
+			// padding-right: .875rem;
+			padding-right: 1rem;
+		}
+	}
+}
+
+.search-form {
+	width: 14%;
+
+	&:after {
+		right: 110px;
+	}
+}
+
+/*	Hero  ** =================================================== */
+.intro {
+	left: 52%;
+	width: 46%;
+}
+
+.featured-excerpt {
+	width: 86%;
+}

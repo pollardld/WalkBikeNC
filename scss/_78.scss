@@ -1,0 +1,89 @@
+header, main, .main, .container, footer {
+	max-width: 68.875em;
+}
+
+/*	Waypoints  ** =================================================== */
+.stuck {
+	width: 47.6125%;
+}
+
+/*	Header  ** =================================================== */
+.logo {
+	width: 21%;
+}
+
+.nav-menu {
+	width: 62%;
+
+	li {
+		font-size: .675em;
+
+		> a {
+			padding-right: 1.25rem;
+		}
+
+		li {
+			font-size: 1em;
+		}
+	}
+
+}
+
+.search-field {
+	font-size: .75em;
+	width: 140px;
+
+	&:focus ~ .search-submit {
+		left: 5px;
+		width: 42px;
+	}
+}
+
+.search-form {
+	width: 15.5%;
+
+	&:after {
+		right: 130px;
+	}
+}
+
+.desktop-search {
+
+	.search-field {
+
+		&:focus {
+			width: 150px;
+		}
+	}
+}
+
+/*	Hero  ** =================================================== */
+.hero {
+	height: 350px;
+}
+
+.intro {
+	left: 55.5%;
+	width: 42%;
+}
+
+.featured-excerpt {
+	width: 76%;
+}
+
+.pillars-hero {
+	height: 250px;
+}
+
+/*	Sidebar  ** =================================================== */
+.leftnav {
+	max-width: 16%;
+
+	.span7 {
+		max-width: 120px;
+	}
+}
+
+.tiptop {
+	left: 1%;
+}

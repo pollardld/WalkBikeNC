@@ -1,0 +1,715 @@
+/*	About  ** =================================================== */
+.oldsite {
+	display: block;
+	margin: 0 auto $margin;
+	width: 50%;
+	max-width: 480px;
+}
+
+.pdf-link {
+	display: inline-block;
+	margin: 0 -2px $margin;
+	width: 45%;
+
+	img {
+		max-width: 480px;
+		width: 100%;
+	}
+}
+
+.wp-image-261 {
+	margin-right: 10%;
+}
+
+/*	Resources  ** =================================================== */
+.advocacy-list {
+	margin-bottom: $margin * 2;
+}
+
+.bicycle-and-pedestrian-and-advisory-commissions,
+.advocacy-groups,
+.local-resources {
+
+	div.wpcf7 {
+
+		.wpcf7-form {
+
+			p {
+				display: inline-block;
+
+				&:first-of-type {
+					margin-right: 0;
+					width: 100%;
+				}
+
+				&:nth-of-type(2) {
+					margin-bottom: 1.5rem;
+					margin-right: 0;
+					margin-left: 0;
+					width: 100%;
+				}
+
+				&:nth-of-type(3) {
+					margin-left: 0;
+					margin-bottom: 1.5rem;
+					margin-right: 0;
+					width: 100%;
+				}
+
+				&:nth-of-type(4) {
+					display: block;
+					margin-bottom: 0;
+					margin-left: 0;
+					width: 50%;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+.nc-bike-route-recommendations {
+
+	.routes {
+		padding: 1.5rem 0;
+
+		.bikeroutes-logo {
+			margin: 0 10%;
+			width: 25%;
+		}
+
+		h3 {
+			margin: 0 -2px;
+			width: 55%;
+		}
+	}
+}
+
+.local-resources,
+.plan-resources {
+
+	.span9 {
+
+		.spread {
+			overflow: hidden;
+		}
+
+		.content-block {
+			background: rgba($lightGrey, 0.05);
+			border-bottom: 1px solid $lightGrey;
+			overflow: hidden;
+			padding: $padding $padding 0;
+
+			&.hash {
+
+				h5 {
+					background: rgba($textColor, 1);
+				}
+			}
+
+			h5 {
+				background: rgba($textColor, 0.65);
+				border-bottom: 1px solid $darkGrey;
+				color: #fff;
+				font-size: 1em;
+				font-weight: 600;
+				margin: -1rem -1rem 1rem;
+				padding: 1rem .25rem 1rem 1rem;
+				position: relative;
+			}
+
+			p {
+				font-size: .875em;
+			}
+		}
+
+		.span12 {
+			margin: 0;
+			width: 100%;
+		}
+	}
+}
+
+.local-resources {
+
+	.group-form {
+		background: rgba($accentColor, 0.1);
+		padding: $padding $padding 0;
+
+		div.wpcf7 {
+			background: transparent;
+			padding: 0;
+		}
+	}
+
+	.span9 {
+
+		.spread {
+			margin-bottom: 3rem;
+		}
+
+		.span6 {
+
+			ul {
+				margin-bottom: 0;
+
+				li {
+					border-bottom: 1px solid $lightGrey;
+					font-size: .95em;
+					list-style: none;
+					margin: 0;
+					padding: 1rem 0 1rem 0;
+					text-indent: 0;
+
+					&:last-of-type {
+						border-bottom: none;
+					}
+				}
+			}
+		}
+	}
+}
+
+.plan-resources {
+
+	a.spread {
+		display: block;
+		margin-bottom: 1rem;
+	}
+
+	.bikeroutes-logo {
+		border-bottom: none;
+		display: block;
+		margin: 0 auto;
+		width: 150px;
+	}
+}
+
+/*	Pillars Colors  ** =================================================== */
+.pillars-of-plan {
+
+	.pillars {
+
+		article:nth-of-type(1n) {
+			background: #fff;
+			padding: 2rem 0;
+
+			&:before {
+				border-top: none;
+			}
+		}
+	}
+
+	#post-20 {
+
+		&:after {
+			content: '';
+		}
+	}
+
+	#post-40 {
+
+		&:after {
+			content: '';
+		}
+	}
+
+	#post-48 {
+
+		&:after {
+			content: '';
+		}
+	}
+
+	#post-51 {
+
+		&:after {
+			content: '';
+		}
+	}
+
+	#post-45 {
+
+		&:after {
+			content: '';
+		}
+	}
+}
+
+.safety, .single-safety_post {
+
+	h1, h2, h4,
+	h4 a,
+	&.recommendations .content p strong {
+		color: $safety;
+	}
+}
+
+.health, .single-health_post {
+
+	h1, h2, h4,
+	h4 a,
+	&.recommendations .content p strong {
+		color: $health;
+	}
+}
+
+.environment, .single-environment_post {
+
+	h1, h2, h4,
+	h4 a,
+	&.recommendations .content p strong {
+		color: $environment;
+	}
+}
+
+.economy, .single-economy_post {
+
+	h1, h2, h4,
+	h4 a,
+	&.recommendations .content p strong {
+		color: $economy;
+	}
+}
+
+.mobility, .single-mobility_post {
+
+	h1, h2, h4,
+	h4 a,
+	&.recommendations .content p strong {
+		color: $mobilty;
+	}
+}
+
+/*	Sidebar  ** =================================================== */
+.parent-pageid-7,
+.single-safety_post,
+.single-health_post,
+.single-environment_post,
+.single-economy_post,
+.single-mobility_post {
+
+	.spread {
+
+		.leftnav {
+
+			&.page-icon {
+				position: relative;
+				margin-top: -4rem;
+			}
+		}
+	}
+}
+
+#showMenu {
+	background: #fff;
+	border: none;
+	display: block;
+	font-family: $lato_reg;
+	font-size: 1.875em;
+	font-weight: $med;
+	height: 44px;
+	margin: 0 auto;
+	position: relative;
+	width: 44px;
+	@include vendor-prefix(transform, rotate(90deg));
+	@include vendor-prefix(transition, 0.3s all ease-in-out);
+
+	&:after {
+		content: '|||';
+		left: 0;
+		line-height: 0;
+		position: absolute;
+		text-align: center;
+		width: 100%;
+	}
+}
+
+.animate {
+
+	#showMenu {
+		@include vendor-prefix(transform, rotate(0deg));
+
+		&:after {
+			content: '⊥';
+			font-family: fantasy;
+			font-size: 1.5em;
+		}
+	}
+}
+
+.page-icon {
+	@include laydown();
+}
+
+.no-csstransforms3d .animate.page-icon {
+    top: 75%;
+}
+
+.leftnav {
+
+	.span7 {
+		@include column(4);
+		display: block;
+		float: none;
+		margin: 0 auto;
+	}
+
+	.wp-post-image {
+		display: block;
+		margin: 0 auto;
+		margin-bottom: $margin / 2;
+		width: 97%;
+	}
+
+	h4 {
+		text-align: center;
+	}
+}
+
+.mobility, .single-mobility_post {
+
+	.spread {
+
+		.leftnav.page-icon {
+			margin-top: -2rem;
+
+			.wp-post-image {
+				width: 100%;
+			}
+		}
+	}
+}
+
+.downloads {
+	border-bottom: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	margin: $margin 0;
+	padding-top: $padding;
+	overflow: hidden;
+	text-align: center;
+
+	strong {
+		display: block;
+		font-size: .9125em;
+		letter-spacing: 0.075em;
+		margin-bottom: 1rem;
+		text-transform: uppercase;
+	}
+
+	.span1 {
+		float: none;
+		margin: 0;
+	}
+}
+
+.download-block {
+	background: rgba($lightGrey, 0.05);
+	display: block;
+
+	&.download {
+		margin: 0 0 $margin;
+		padding: .5rem;
+
+		&:last-of-type {
+			border-bottom: 1px solid $midGrey;
+		}
+	}
+
+	.download-icon {
+		max-width: 16px;
+
+		svg {
+			height: 100%;
+		}
+	}
+
+	.download-title {
+		font-weight: 400;
+		letter-spacing: 0.25em;
+	}
+}
+
+.download {
+	display: block;
+	float: left;
+	margin-bottom: .75rem;
+	padding-bottom: .75rem;
+	text-align: center;
+	width: 33%;
+
+	&:last-of-type {
+		border-bottom: none;
+	}
+}
+
+.download-icon, .download-icon.span3 {
+	display: inline-block;
+	float: none;
+	vertical-align: middle;
+	max-width: 24px;
+
+	svg {
+		height: 38px;
+	}
+}
+
+.download-title, .download-title.span8 {
+	display: inline-block;
+	float: none;
+	font-family: $opensans_bold;
+	font-size: .5em;
+	font-weight: $bold;
+	letter-spacing: 0.05em;
+	text-transform: uppercase;
+	vertical-align: middle;
+}
+
+/*	Main  ** =================================================== */
+.page-bg {
+	display: block;
+	height: 200px;
+	margin: 0 auto;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	max-width: 1102px;
+}
+
+.leftnav-link {
+	display: block;
+	font-family: $lato_reg;
+	font-size: .8125em;
+	font-weight: $med;
+	line-height: 1.8375em;
+	margin-bottom: .75rem;
+}
+
+.content {
+	margin: $margin 0;
+	overflow: hidden;
+	@include clear();
+
+	&.spread {
+		> .span9 { @include pushpullwidth(12) }
+		> .span3 { display: none; }
+	}
+
+	h1 {
+		letter-spacing: 0;
+		margin-bottom: 1rem;
+		text-transform: capitalize;
+	}
+
+	p {
+		font-family: $lato_light;
+		font-weight: $light;
+		line-height: 1.9375em;
+
+		+ *:not(p) {
+			margin-top: $margin;
+		}
+	}
+
+	.span9 {
+		font-family: $lato_light;
+		font-weight: $light;
+		line-height: 1.9375em;
+	}
+
+	strong {
+		font-weight: normal;
+	}
+}
+
+/*	Other Pillars  ** =================================================== */
+.other-pillars {
+	padding-left: 10%;
+
+	.other-title {
+		display: block;
+		font-size: .8125em;
+		line-height: 1.5em;
+		margin-bottom: 1rem;
+	}
+
+	img {
+		width: 98%;
+	}
+
+	img[alt="mobility"] {
+		width: 100%;
+	}
+
+	section {
+		border-bottom: 1px solid #ccc;
+		display: block;
+		margin-bottom: .5rem;
+		overflow: hidden;
+		padding-bottom: .5rem;
+
+		.span3 {
+			display: inline-block;
+			float: none;
+			vertical-align: middle;
+		}
+
+		.span8 {
+			float: none;
+		}
+
+		.span1 {
+			float: none;
+			margin: 0;
+		}
+	}
+
+	.other-link {
+		font-family: $lato_reg;
+		font-size: .6125em;
+		font-weight: $med;
+		line-height: 44px;
+		text-transform: uppercase;
+	}
+}
+
+/*	Pillars  ** =================================================== */
+.chart-intro {
+	font-size: .75em;
+	line-height: 1.75em;
+}
+
+.legend {
+	font-family: $lato_bold;
+	font-size: .75em;
+	font-weight: $bold;
+	margin-bottom: .5rem;
+	text-align: center;
+}
+
+.survive {
+
+	span {
+		background: rgba(24, 210, 72, 0.5);
+		display: inline-block;
+		height: .75em;
+		margin-right: .25rem;
+		width: .75em;
+	}
+}
+
+/*	Contact  ** =================================================== */
+.contact {
+
+	cite {
+		color: $primaryColor;
+		margin-bottom: $margin * 2;
+	}
+}
+
+div.wpcf7 {
+	background: rgba($accentColor, 0.1);
+	margin-bottom: $margin;
+	padding: $padding;
+
+	.wpcf7-form {
+
+		sup {
+			color: $secondaryColor;
+		}
+
+		input, textarea {
+			border: 1px solid #ccc;
+			line-height: 1.6125em;
+			padding: .25rem .5rem;
+			width: 100%;
+		}
+
+		textarea {
+			height: 8rem;
+		}
+
+		input[type="submit"] {
+			background: $textColor;
+			border: none;
+			color: #fff;
+			display: inline-block;
+			font-family: $lato_bold;
+			font-weight: $bold;
+			letter-spacing: .125em;
+			padding: .5rem 1.5rem;
+			text-transform: uppercase;
+			min-width: 30%;
+			max-width: 50%;
+			@include vendor-prefix(transition, 0.2s background ease);
+
+			&:hover, &:focus {
+				background: rgba($textColor, 0.7);
+			}
+
+			&:active {
+				background: $primaryColor;
+			}
+		}
+	}
+}
+
+/*	404  ** =================================================== */
+.error404 {
+
+	.container {
+
+		.search-form {
+			width: auto;
+			margin: 0;
+
+			&:after {
+				content: '';
+			}
+		}
+
+		.search-field {
+			background: transparent;
+			border: 1px solid $lightGrey;
+			font-size: 1em;
+			text-indent: 0;
+			width: 250px;
+
+			&:focus {
+
+				~ .search-submit {
+					width: 122px;
+				}
+			}
+		}
+
+		.search-submit {
+			height: 100%;
+			opacity: 1;
+			position: relative;
+			right: 0;
+			top: 0;
+			width: auto;
+		}
+	}
+}
+
+/*	Search  ** =================================================== */
+.search {
+
+	h1 {
+		margin-bottom: $margin;
+	}
+
+	article {
+		border-bottom: 1px solid $textColor;
+		margin-bottom: $margin;
+		padding-bottom: $margin;
+	}
+
+	.excerpt-link {
+		width: 40%;
+	}
+}

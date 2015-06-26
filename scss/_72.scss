@@ -1,0 +1,24 @@
+header, main, .main, .container, footer {
+	max-width: 62em;
+}
+
+.logo {
+	width: 22%;
+}
+
+.nav-menu {
+	width: 63%;
+
+	li {
+		font-size: .675em;
+		padding-right: 1rem;
+	}
+}
+
+.search-form {
+	width: 13%;
+}
+
+.featured-excerpt {
+	width: 80%;
+}

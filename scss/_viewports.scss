@@ -1,0 +1,98 @@
+/*	======================================
+	Responsive while statement
+====================================	*/
+// Initial Width up to 25
+header, main, .main, .container, footer {
+	max-width: 80%;
+}
+
+main .container {
+	max-width: 100%;
+}
+
+// starting media query
+$i: 25;
+
+// loop through responsive containers.
+@while $i < 50 {
+	
+	@media (min-width: #{$i}em) { 		
+	
+		header, main, .main, .container, footer {
+			// 10% padding to window (5% each side)
+			max-width: $i * .9em;
+		}
+	}
+	// add 4 for next query
+	$i: $i + 4;
+}
+
+@media (min-width: 33em) {
+	@import '33';
+}
+
+@media (min-width: 48.1em) {
+	@import '48';
+}
+
+@media (min-width: 56.25em) {
+	@import '56';
+}
+
+@media (min-width: 64em) {
+	@import '64';
+}
+
+@media (min-width: 72em) {
+	@import '72';
+}
+
+@media (min-width: 78em) {
+	@import '78';
+}
+
+// iPad with portrait orientation.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:portrait){
+	
+}
+ 
+// iPad with landscape orientation.
+@media all and (device-width: 768px) and (device-height: 1024px) and (orientation:landscape){
+	
+}
+ 
+// iPhone 6
+@media all and (device-width: 375px) and (device-height: 667px) and ( orientation: portrait ) {
+	
+}
+
+// iPhone 6
+@media all and (device-width: 375px) and (device-height: 667px) and ( orientation: landscape ) {
+	
+}
+
+// iPhone 6 plus
+@media all and (device-width: 414px) and (device-height: 736px) and ( orientation: portrait ) {
+	
+}
+
+// iPhone 6 plus
+@media all and (device-width: 414px) and (device-height: 736px) and ( orientation: landscape ) {
+	
+}
+
+// iPhone 5
+@media screen and (device-aspect-ratio: 40/71) and ( orientation: portrait ) {
+	
+}
+
+// iPhone 5 and 4 landscape
+@media screen and (device-aspect-ratio: 40/71) and ( orientation: landscape ), 
+		screen and (device-aspect-ratio: 2/3 ) and ( orientation: landscape ) {
+
+}
+
+// iPhone 4 
+@media screen and (device-aspect-ratio: 2/3 ) and ( orientation: portrait ) {
+
+}

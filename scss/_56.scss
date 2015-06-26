@@ -1,0 +1,364 @@
+header, main, .main, .container, footer {
+	max-width: 54em;
+}
+
+/*	Global Styles  ** =================================================== */
+.content {
+
+	h1 {
+		font-size: 1.875em;
+	}
+}
+
+/*	Header  ** =================================================== */
+header {
+	padding-top: 2.5rem;
+}
+
+.logo {
+	display: inline-block;
+	margin: 0;
+	margin-right: -4px;
+	vertical-align: bottom;
+	// width: 23%;
+	width: 25%;
+
+	svg {
+		// max-width: 180px;
+		max-width: 200px; // beta logo
+	}
+}
+
+.nav-menu {
+	display: inline-block;
+	margin: 0 0 -3px;
+	vertical-align: bottom;
+	// width: 61%;
+	width: 59%;
+
+	li {
+		font-size: .5em;
+		
+		a {
+			font-size: 1em;
+			display: block;
+			letter-spacing: 0.0025em;
+			padding: 10px 0 2px 0;
+			// padding-right: .5rem;
+			padding-right: .8375rem;
+		}
+	}
+}
+
+.search-form {
+	margin: 0;
+	margin-bottom: -1px;
+	margin-right: -4px;
+	vertical-align: baseline;
+	width: 16%;
+}
+
+.desktop-search {
+	position: relative;
+	top: auto;
+	right: auto;
+}
+
+/*	Waypoints  ** =================================================== */
+.stuck {
+	width: 49.8125%;
+}
+
+/*	Hero  ** =================================================== */
+.hero {
+	background-image: url(../img/bg-2000.jpg);
+}
+
+.intro {
+	left: 20%;
+	top: 36%;
+	width: 78%;
+}
+
+/*	Pillars  ** =================================================== */
+.pillars-hero {
+	background-image: url(../img/pillars-bg.jpg);
+}
+
+/*	Page  ** =================================================== */
+.page-bg {
+	height: 250px;
+	
+	img {
+		@include vendor-prefix(transform, translate(0,-25%));
+	}
+}
+
+.content {
+
+	&.spread {
+		> .span9 { @include pushpullwidth(9) }
+		> .span3 { display: block; }
+	}
+}
+
+/*	News and Events  ** =================================================== */
+.news-post {
+	
+	h1 {
+		font-size: 1.125em;
+	}
+}
+
+.single-news_events {
+
+	.news-post {
+	
+		h1 {
+			font-family: $opensans_extra_bold;
+			font-size: 1.5em;
+			font-weight: $extraBold;
+		}
+	}
+}
+
+/*	Resources  ** =================================================== */
+.bicycle-and-pedestrian-and-advisory-commissions,
+.advocacy-groups,
+.local-resources {
+
+	div.wpcf7 {
+
+		.wpcf7-form {
+
+			p {
+				display: inline-block;
+				margin-bottom: 1rem;
+
+				&:first-of-type,
+				&:nth-of-type(3) {
+					margin-right: 4%;
+					width: 48%;
+				}
+
+				&:nth-of-type(2) {
+					margin-right: 0;
+					margin-left: -4px;
+					width: 48%;
+				}
+
+				&:nth-of-type(4) {
+					margin-bottom: 0;
+					margin-left: 0;
+					width: 40%;
+				}
+
+				input[type=submit] {
+					font-size: .875em;
+					line-height: 1.25em;
+					padding: .5rem 2.5rem;
+					width: auto;
+				}
+			}
+
+		}
+
+	}
+
+}
+
+/*	Contact  ** =================================================== */
+.contact {
+
+	div.wpcf7 {
+
+		.wpcf7-form {
+
+			p {
+				overflow: hidden;
+
+				&:first-of-type {
+					margin-right: 3%;
+					width: 48.5%;
+				}
+
+				&:nth-of-type(2) {
+					margin-right: 0;
+					margin-left: -4px;
+					width: 48.5%;
+				}
+
+				&:nth-of-type(3) {
+					display: block;
+					margin-left: 0;
+					width: 100%;
+				}
+			}
+		}
+	}
+}
+
+div.wpcf7 {
+
+	.wpcf7-form {
+
+		p {
+			display: inline-block;
+
+			&:first-of-type {
+				margin-right: 3%;
+				width: 31.33%;
+			}
+
+			&:nth-of-type(2) {
+				margin-right: 3%;
+				margin-left: -4px;
+				width: 31.33%;
+			}
+
+			&:nth-of-type(3) {
+				margin-left: -4px;
+				width: 31.33%;
+			}
+
+			&:nth-of-type(4) {
+				margin-right: 3%;
+				width: 42.99%;
+			}
+
+			&:nth-of-type(5) {
+				margin-left: -4px;
+				margin-right: 3%;
+				width: 23%;
+			}
+
+			&:nth-of-type(6) {
+				margin-left: -4px;
+				margin-right: 3%;
+				width: 10%;
+			}
+
+			&:nth-of-type(7) {
+				margin-left: -4px;
+				width: 15%;
+			}
+
+			&:nth-of-type(8) {
+				width: 100%;
+			}
+
+			&:nth-of-type(9) {
+				width: 100%;
+			}
+		}
+	}
+}
+
+/*	Footer  ** =================================================== */
+footer {
+
+	.about-widget {
+		float: left;
+		margin: 0 1% 0 0;
+		width: 20.5%;
+	}
+
+	.span5 {
+		float: left;
+		margin: 0 1%;
+		width: 42%;
+	}
+
+	.span2 {
+		float: left;
+		margin: 0 1%;
+		width: 20.5%;
+	}
+
+	.contact-widget {
+		float: left;
+		margin: 0 0 0 1%;
+		width: 11%;
+	}
+
+	a {
+		display: inline;
+		padding: 0;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.main-nav {
+		margin: $margin 0;
+	}
+
+	.menu-item-has-children {
+		float: left;
+		margin-right: 2%;
+		width: 30%;
+
+		&:last-child {
+			margin-right: 0;
+			width: 36%;
+		}
+
+		> a {
+			margin-left: 0;
+			padding-left: 0;
+		}
+	}
+
+	.sub-menu {
+		margin-top: .375rem;
+	}
+}
+
+.footer-news {
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.contact-widget {
+
+	.textwidget {
+
+		a {
+			margin-bottom: 0;
+			padding: 0;
+		}
+
+		.tel {
+			margin-bottom: 1rem;
+		}
+	}
+}
+
+/*	Grid  ** =================================================== */
+.span1 { @include column(1) }
+.span2 { @include column(2) }
+.span3 { @include column(3) }
+.span4 { @include column(4) }
+.span5 { @include column(5) }
+.span6 { @include column(6) }
+.span7 { @include column(7) }
+.span8 { @include column(8) }
+.span9 { @include column(9) }
+.span10 { @include column(10) }
+.span11 { @include column(11) }
+
+.spread {
+    &> .span1 { @include pushpullwidth(1); }
+    &> .span2 { @include pushpullwidth(2); }
+    &> .span3 { @include pushpullwidth(3); }
+    &> .span4 { @include pushpullwidth(4); }
+    &> .span5 { @include pushpullwidth(5); }
+    &> .span6 { @include pushpullwidth(6); }
+    &> .span7 { @include pushpullwidth(7); }
+    &> .span8 { @include pushpullwidth(8); }
+    &> .span9 { @include pushpullwidth(9); }
+    &> .span10  { @include pushpullwidth(10); }
+    &> .span11  { @include pushpullwidth(11); }
+    &> .span12  { @include pushpullwidth(12); }
+}

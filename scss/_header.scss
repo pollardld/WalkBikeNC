@@ -1,0 +1,286 @@
+/*	Header  ** =================================================== */
+header {
+	background: #fff;
+	display: block;
+	margin: 0 auto $padding;
+	padding-top: $padding;
+	position: relative;
+	@include clear();
+}
+
+.logo {
+	display: block;
+	margin: 0 auto;
+	// width: 180px;
+	width: 200px; // beta width
+
+	svg {
+		display: block;
+		height: 100%;
+		overflow: hidden;
+		max-width: 100%;
+	}
+}
+
+.navicon {
+	color: $textColor;
+	left: 0;
+	height: 3rem;
+	position: fixed;
+	text-align: center;
+	top: .25rem;
+	width: 3rem;
+	z-index: 2;
+	@include vendor-prefix (transform, rotate(90deg));
+	@include vendor-prefix (transition, 0.3s all ease-in-out);
+
+	&:before, &:after {
+		background: transparent;
+		border-bottom: 2px solid $textColor;
+		border-top: 1px solid $textColor;
+		content: '';
+		height: 0.5rem;
+		position: fixed;
+		left: .5rem;
+		top: 1.25rem;
+		width: 55%;
+		@include vendor-prefix (transition, 0.3s all ease-in-out 0.3s);
+	}
+
+	&:before {
+		@include vendor-prefix (transform, rotate(90deg));
+	}
+
+	&:after {
+		left: 1.0625rem;
+		@include vendor-prefix (transform, rotate(-90deg));
+	}
+}
+
+.nav-check {
+	cursor: pointer;
+	left: 0;
+	height: 3rem;
+	opacity: 0;
+	position: fixed;
+	top: .25rem;
+	width: 3rem;
+	z-index: 3;
+	@include vendor-prefix (transition, 0.3s all ease-in-out);
+
+	&:checked {
+		height: 100%;
+		left: 80%;
+		width: 80%;
+		@include vendor-prefix (transition, 0.3s all ease-in-out);
+
+		& + .navicon {
+			left: 80%;
+			@include vendor-prefix (transition, 0.3s all ease-in-out);
+
+			&:before, &:after {
+				background: $textColor;
+				border: none;
+				height: 2px;
+				left: .6875rem;
+				top: 1.5rem;
+				@include vendor-prefix (transition, 0.3s all ease-in-out 0.3s);
+			}
+
+			&:before {
+				@include vendor-prefix (transform, rotate(45deg));
+			}
+
+			&:after {
+				@include vendor-prefix (transform, rotate(-45deg));
+			}
+		}
+
+		& ~ nav {
+			left: 0;
+			@include vendor-prefix (transition, 0.3s left ease-in-out);
+		}
+	}
+}
+
+.nav-menu {
+	background: rgba(252,250,255,0.97);
+	height: 100%;
+	left: -80%;
+	overflow: scroll;
+	position: fixed;
+	top: 0;
+	width: 80%;
+	z-index: 3;
+	@include vendor-prefix (transition, 0.3s left ease-in-out);
+
+	ul {
+		list-style: none;
+		margin: 0;
+		padding: $padding 0;
+	}
+
+	li {
+		display: block;
+		font-size: .6875em;
+	}
+
+	@media screen and (max-width: 48em) {
+
+		.menu-item-has-children {
+
+			> a:after {
+				@include vendor-prefix(transition, 0.2s all ease-in-out);
+				@include vendor-prefix(transform-origin, 70% 50%);
+			}
+
+			.sub-menu {
+				height: 0;
+				overflow: hidden;
+				padding: 0 0 0 $padding;
+				margin: 0;
+				@include vendor-prefix(transition, 0.2s all ease-in-out);
+			}
+
+			.show {
+
+				+ .sub-menu {
+					height: auto;
+					margin: 5px 0;
+				}
+
+				&:after {
+					@include vendor-prefix(transform, rotate(0deg));
+				}
+			}
+		}
+
+	}
+
+	a {
+		display: block;
+		font-family: $lato_bold;
+		font-weight: $bold;
+		letter-spacing: 0.05em;
+		padding: $padding 2rem;
+		position: relative;
+		text-transform: uppercase;
+		z-index: 1;
+
+		&:before {
+			@include linkEffect();
+		}
+
+		&:after {
+			@include linkArrow();
+			color: #666;
+			height: 45px;
+			line-height: 42px;
+			right: 1rem;
+		}
+	}
+
+	.menu-item-has-children {
+
+		> a:after {
+			@include vendor-prefix(transform, rotate(90deg));
+		}
+	}
+}
+
+.search-form {
+	font-family: $opensans_reg;
+	margin: 0 auto;
+	position: relative;
+
+	&:after {
+		background-image: url(../img/search.svg);
+		background-size: auto 55%;
+		background-position: center center;
+		background-repeat: no-repeat;
+		content: '';
+		height: 90%;
+		pointer-events: none;
+		position: absolute;
+		right: 112px;
+		top: 5%;
+		width: 6%;
+		@include vendor-prefix(transform, rotate(20deg));
+		@include vendor-prefix(transform-origin, 50% 100%);
+	}
+}
+
+.mobile-search {
+	display: block;
+	padding: 0 2rem;
+
+	&:after {
+		left: 2.25rem;
+		right: auto;
+		top: 0;
+	}
+
+	.search-field {
+		background: rgba(238,236,248,0.95);
+		border: none;
+		font-size: .75em;
+		padding: .5rem;
+		width: 90%;
+
+		&:focus ~ .search-submit {
+			width: 70%;
+		}
+	}
+
+	.search-submit {
+		right: 2rem;
+	}
+}
+
+.desktop-search {
+	display: none;
+	width: 23%;
+
+	.search-field {
+		@include vendor-prefix(transition, 0.2s all ease-in-out);
+
+		&:focus {
+			padding: 2px;
+		}
+	}
+}
+
+.search-field {
+	background: transparent;
+	border: 1px solid $lightGrey;
+	font-size: .6875em;
+	text-indent: 14%;
+	width: 118px;
+
+	&:focus {
+
+		~ .search-submit {
+			width: 122px;
+		}
+	}
+}
+
+.search-submit {
+	height: 100%;
+	opacity: 0;
+	position: absolute;
+	right: 0;
+	top: 0;
+	width: 0;
+}
+
+.screen-reader-text {
+	left: -99999px;
+	position: absolute;
+	width: 0;
+}
+
+#menu-item-561 a:hover, 
+#menu-item-562 a:hover {
+	opacity: 1;
+}
